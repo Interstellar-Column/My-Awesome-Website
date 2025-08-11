@@ -1,0 +1,27 @@
+* {
+  text-align: center;
+}
+.hover-text {
+  position: relative;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.hover-text:hover::after {
+  content: "Ethan Campbell - All Rights Reserved";
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
