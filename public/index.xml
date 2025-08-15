@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heavenly-Cyberspace</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Heavenly-Cyberspace</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Aug 2025 23:44:27 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compilation</title>
+      <link>//localhost:1313/articles/compilation/</link>
+      <pubDate>Fri, 15 Aug 2025 23:44:27 +0100</pubDate>
+      <guid>//localhost:1313/articles/compilation/</guid>
+      <description>&lt;h1 class=&#34;heading&#34; id=&#34;coming-soon--&#34;&gt;&#xA;  Coming Soon !! 🍿&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#coming-soon--&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>The Kick Archive</title>
+      <link>//localhost:1313/articles/shoes/</link>
+      <pubDate>Thu, 14 Aug 2025 21:56:19 +0100</pubDate>
+      <guid>//localhost:1313/articles/shoes/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;club-c-85-vintage&#34;&gt;&#xA;  Club C 85 Vintage&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#club-c-85-vintage&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;These have been my goto daily wear trainers for the last year &amp;amp; a bit. I got a pair of vintages in Indonesia and wore them approx. 70% of the year and they have held up supringsly well. The trainers have a good combination of soft, supleness yet upholding its integrity and strength. Overtime they go from a similar top down silhouette of an Addidas Gazelle but overtime look more like a pair of Nike AF1s which I believe is due the leather stretching and becoming even more lax. After wearing dress shoes I find these shoes uncomfortable just because of how soft and comfortable they are !! Highly reccomended pair of kicks, especially considering their price and durability.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PostmarketOS</title>
+      <link>//localhost:1313/articles/pmos-whyred/</link>
+      <pubDate>Thu, 14 Aug 2025 14:55:46 +0100</pubDate>
+      <guid>//localhost:1313/articles/pmos-whyred/</guid>
+      <description>&lt;h3 class=&#34;heading&#34; id=&#34;first-tango-with-postmarketos&#34;&gt;&#xA;  First Tango with PostmarketOS&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#first-tango-with-postmarketos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;This guide will be walking through the install of pmOS to my trusty &amp;lsquo;whyred&amp;rsquo;. The device is on TWRP 3.3.1-0&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Portfolio</title>
+      <link>//localhost:1313/portfolio/</link>
+      <pubDate>Wed, 13 Aug 2025 20:37:04 +0100</pubDate>
+      <guid>//localhost:1313/portfolio/</guid>
+      <description>&lt;h3 class=&#34;heading&#34; id=&#34;heavenly-cyberspace&#34;&gt;&#xA;  Heavenly-Cyberspace&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#heavenly-cyberspace&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;This is the current website your now viewing built using HUGO &amp;amp; the &amp;ldquo;typo&amp;rdquo; theme by tomfran.&#xA;The website &amp;amp; relevant files are hosted on &lt;a href=&#34;https://github.com/Interstellar-Column/My-Awesome-Website&#34;&gt;https://github.com/Interstellar-Column/My-Awesome-Website&lt;/a&gt;. It took a total of 5 days to build (including learning syntax,directory structure etc).&lt;/p&gt;&#xA;&lt;p&gt;This website first started off being written in Good Ol&amp;rsquo; HTML5 &amp;amp; CSS. However the pace of development was too slow + uploading new content was a hassle. It was pretty simple with very minimal font and alignment CSS styling which did the trick but as previously mentioned, is not sustainable.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Το ιστολόγιο</title>
+      <link>//localhost:1313/blog/</link>
+      <pubDate>Wed, 13 Aug 2025 14:35:11 +0100</pubDate>
+      <guid>//localhost:1313/blog/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;first-tango-with-postmarketos&#34;&gt;&#xA;  First Tango with PostmarketOS&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#first-tango-with-postmarketos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The test subject for this install will be my Xiaomi Redmi Note 5 Pro (whyred)&lt;br&gt;&#xA;Its starting off with LineageOS although its tried on HavocOS, Ressurection&lt;br&gt;&#xA;and many other custom ROMs. &lt;a href=&#34;//localhost:1313/articles/pmos-whyred&#34;&gt;Read more here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;the-shoe-library&#34;&gt;&#xA;  The Shoe Library&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#the-shoe-library&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Everyone wears shoes&amp;hellip; Well most people do anyways, so here are the shoes that I wear:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Reebok Club C 85 Vintage&lt;/li&gt;&#xA;&lt;li&gt;Reebok Club C 85 Vintage &amp;lsquo;40th Anniversary&amp;rsquo;&lt;/li&gt;&#xA;&lt;li&gt;Solovair Tassel Loafers&lt;/li&gt;&#xA;&lt;li&gt;TCX Blend 2 (Motorbike Boots)&#xA;The full collection is &lt;a href=&#34;//localhost:1313/articles/shoes&#34;&gt;here&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>A Little About Myself</title>
+      <link>//localhost:1313/about/</link>
+      <pubDate>Wed, 13 Aug 2025 10:34:46 +0100</pubDate>
+      <guid>//localhost:1313/about/</guid>
+      <description>&lt;p&gt;I am Ethan Campbell, a UK based software engineer specialising in full stack web development. I love working with people and seeing their ideas realized, which is a key part of my work.&lt;/p&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;s-o-f-t-w-a-r-e&#34;&gt;&#xA;  S o f t w a r e&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#s-o-f-t-w-a-r-e&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;My experience with software ranges from programming in Python to building and managing home server infastructure. Recently I&amp;rsquo;ve been leaning towards low level software, in particular, drivers &amp;amp; how computers interact with I/O. Starting from 13/08/2025 I multiple times a week compile my own software (mainly for better performance &amp;amp; customisability). &lt;a href=&#34;//localhost:1313/compilation&#34;&gt;&lt;em&gt;see my blog on compilation&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

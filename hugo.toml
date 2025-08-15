@@ -1,0 +1,22 @@
+languageCode = 'en-us'
+title = 'Heavenly-Cyberspace'
+theme = 'typo'
+baseURL = "https://heavenly-cyberspace.xyz/"
+[markup.goldmark.renderer]
+  unsafe = true
+
+  [[params.menu]]
+    name = "Home"
+    url = "/"
+  [[params.menu]]
+    name = "About"
+    url = "/about/"
+  [[params.menu]]
+    name = "Blog"
+    url = "/blog/"
+  [[params.menu]]
+    name = "Articles"
+    url = "/articles/"
+  [[params.menu]]
+    name = "Portfolio"
+    url = "/portfolio/"
