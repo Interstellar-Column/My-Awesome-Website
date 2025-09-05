@@ -44,11 +44,23 @@ jobs:
             | cut -d '"' -f 4 \
             | xargs curl -L -o dart-sass.tar.gz
 
-          tar -xzf dart-sass.tar.gz
+          echo "Extracted contents:"
+          ls -l
 
-          DART_SASS_DIR=$(find . -maxdepth 1 -type d -name "dart-sass-*")
-          
+          # Find the correct folder
+          DART_SASS_DIR=$(find . -maxdepth 1 -type d -iname "dart-sass*" | head -n 1)
+
+          if [ -z "$DART_SASS_DIR" ]; then
+            echo "❌ Error: Dart Sass directory not found after extraction."
+            exit 1
+          fi
+
+          echo "✅ Found Dart Sass directory: $DART_SASS_DIR"
+
+          sudo rm -rf /usr/local/lib/dart-sass
           sudo mv "$DART_SASS_DIR" /usr/local/lib/dart-sass
+
+          sudo rm -f /usr/local/bin/sass
           sudo ln -s /usr/local/lib/dart-sass/sass /usr/local/bin/sass
       - name: Checkout
         uses: actions/checkout@v4
