@@ -1,0 +1,16 @@
+# Ignore Hugo build output
+public/
+
+# Hugo build lock file
+.hugo_build.lock
+
+# Large backup/archive files
+*.7z
+
+# System/IDE files (optional but helpful)
+.DS_Store
+Thumbs.db
+*.log
+
+# Node-related files (only if you're using npm modules/themes)
+node_modules/
