@@ -1,7 +1,6 @@
 languageCode = 'en-us'
 title = 'Heavenly-Cyberspace'
 theme = 'typo'
-baseURL = "https://heavenly-cyberspace.xyz/"
 [markup.goldmark.renderer]
   unsafe = true
 
