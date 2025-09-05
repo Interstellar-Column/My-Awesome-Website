@@ -45,7 +45,10 @@ jobs:
             | xargs curl -L -o dart-sass.tar.gz
 
           tar -xzf dart-sass.tar.gz
-          sudo mv dart-sass-*/ /usr/local/lib/dart-sass
+
+          DART_SASS_DIR=$(find . -maxdepth 1 -type d -name "dart-sass-*")
+          
+          sudo mv "$DART_SASS_DIR" /usr/local/lib/dart-sass
           sudo ln -s /usr/local/lib/dart-sass/sass /usr/local/bin/sass
       - name: Checkout
         uses: actions/checkout@v4
