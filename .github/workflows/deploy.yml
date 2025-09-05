@@ -46,7 +46,7 @@ jobs:
 
           tar -xzf dart-sass.tar.gz
           sudo mv dart-sass-*/ /usr/local/lib/dart-sass
-    sudo ln -s /usr/local/lib/dart-sass/sass /usr/local/bin/sass
+          sudo ln -s /usr/local/lib/dart-sass/sass /usr/local/bin/sass
       - name: Checkout
         uses: actions/checkout@v4
         with:
