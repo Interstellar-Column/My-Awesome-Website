@@ -37,25 +37,25 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass (Manual method)
+      - name: Install Dart Sass (manual method)
         run: |
           curl -s https://api.github.com/repos/sass/dart-sass/releases/latest \
             | grep "browser_download_url.*linux-x64.tar.gz" \
             | cut -d '"' -f 4 \
             | xargs curl -L -o dart-sass.tar.gz
-
-          # Create a temp folder for clean extraction
+      
           mkdir -p dart-sass-temp
           tar -xzf dart-sass.tar.gz -C dart-sass-temp
-
-          # Move the extracted folder (e.g. dart-sass-1.70.0) into place
+      
+          # Move the inner dart-sass-* directory contents to /usr/local/lib/dart-sass
           DART_SASS_DIR=$(find dart-sass-temp -maxdepth 1 -type d -name "dart-sass-*")
           sudo rm -rf /usr/local/lib/dart-sass
-          sudo mv "$DART_SASS_DIR" /usr/local/lib/dart-sass
-
+          sudo mkdir -p /usr/local/lib/dart-sass
+          sudo mv "$DART_SASS_DIR"/* /usr/local/lib/dart-sass
+      
           sudo rm -f /usr/local/bin/sass
           sudo ln -s /usr/local/lib/dart-sass/sass /usr/local/bin/sass
-
+      
           # Confirm it's working
           sass --version
       - name: Checkout
