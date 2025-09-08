@@ -49,6 +49,13 @@ jobs:
         run: sass --version
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Remove submodule-related Git config
+        run: |
+        /usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+        /usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+        /usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic **
+        
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
