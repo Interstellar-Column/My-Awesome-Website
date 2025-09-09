@@ -1,6 +1,6 @@
 languageCode = 'en-us'
 title = 'Heavenly-Cyberspace'
-theme = 'aafu'
+theme = 'themes/aafu'
 [build]
   [build.buildStats]
     enable = true
