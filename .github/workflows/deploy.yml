@@ -49,6 +49,8 @@ jobs:
         run: sass --version
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: false
         
       - name: Setup Pages
         id: pages
