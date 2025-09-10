@@ -64,6 +64,10 @@ jobs:
         run: |
           hugo \
             -D --baseURL "${{ steps.pages.outputs.base_url }}/"
+          
+      - name: Run Pagefind search indexing
+        run: npx -y pagefind --site public
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
