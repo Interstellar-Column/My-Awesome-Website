@@ -1,4 +1,3 @@
-# HUGO build & deployment for gh-pages
 name: Deploy Hugo site to Pages
 
 on:
