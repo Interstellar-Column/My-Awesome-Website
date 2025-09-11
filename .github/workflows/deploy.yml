@@ -24,7 +24,6 @@ concurrency:
 defaults:
   run:
     shell: bash
-
 - name: Setup Go (for Hugo Modules)
   uses: actions/setup-go@v4
   with:
