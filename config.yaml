@@ -1,0 +1,156 @@
+languageCode: "en-us"
+baseURL: "https://interstellar-column.github.io/My-Awesome-Website/"
+title: "Heavenly-Cyberspace"
+theme: "aafu"
+
+build:
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: "assets/notwatching/hugo_stats\\.json"
+      target: "css"
+    - source: "(postcss|tailwind)\\.config\\.js"
+      target: "css"
+
+module:
+  imports:
+    - path: "github.com/darshanbaral/aafu"
+  mounts:
+    - source: "assets"
+      target: "assets"
+    - disableWatch: true
+      source: "hugo_stats.json"
+      target: "assets/notwatching/hugo_stats.json"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  menu:
+    - name: "Home"
+      url: "/"
+    - name: "About"
+      url: "/about/"
+    - name: "Blog"
+      url: "/blog/"
+    - name: "Articles"
+      url: "/articles/"
+    - name: "Portfolio"
+      url: "/portfolio/"
+
+  author: Darshan Baral
+  description: Website title
+  copyright: >-
+    powered by [hugo](https://gohugo.io/)
+  theme:
+    mainTheme: dark
+    showAttribute: true
+    singlePage: false  
+
+  profile:
+    name: "Campbell. Ethan Campbell."
+    tagline: Full-Stack Web Developer
+    location: "London, UK"
+    photo: profile.jpg
+
+  social:
+    title: Links
+    list:
+      - icon: fab fa-github
+        url: "https://github.com/Interstellar-Column"
+        title: GitHub
+
+  showInAccordion:
+    - item: aboutme
+      expand: true
+    - item: experience
+    - item: education
+    - item: project
+    - item: skill
+    - item: hobby
+
+  aboutme:
+    title: About Me
+    icon: fas fa-user
+    description: I'm a Full-Stack Web Developer, pending Python Programmer 🐍. I love people and using my skills + technical knowledge to fulfill the needs of those without such.
+
+  experience:
+    title: Experiences
+    icon: fas fa-briefcase
+    list:
+      - position: Passionate Linux User
+        dates: 2019 - Present
+        company: Self Taught 
+        details: |-
+          - Bounced between Arch & Linux Mint
+          - Recently moved most of my systems to BTRFS 💪
+          - *note* Proton/ Wine in the modern day is awesome, especially when creating enviroments to run obsolete games and windows software.
+      - position: First Evangelism & Community Outreach Trip
+        dates: 2023 - 2024
+        company: YWAM Tyler
+        details: |-
+          - Christian Fellowship & Scripture Exploration ✨
+          - Outreach in Jakarta & Bandung, Indonesia
+          - Learnt Basic Indonesian
+          - Networked with & supported their local ministries
+      - position: Second Evangelism & Community Outreach Trip
+        dates: 2024 - 2025
+        company: YWAM Tyler
+        details: |-
+          - Christian Fellowship & Scripture Exploration ✨
+          - Hurricane Helene relief in Valdosta, GA (Samaritans Purse)
+          - Community Support & Evangelism in Keyser, WV
+          - Ministry Support & Evangelism in Alamogordo & Cloudcroft, NM
+
+  education:
+    title: Education
+    icon: fas fa-graduation-cap
+    list:      
+      - degree: GCSE Computer Science & IT
+        college: SMSJ CE
+        dates: 2019 - 2021
+      - degree: Computer Science & IT (Lvl 3)
+        college: College of North West London
+        dates: 2021 - 2023
+      - degree: CS50 Python
+        college: Harvard
+        dates: 2025 - Present
+
+  project:
+    title: Projects
+    icon: fas fa-project-diagram
+    list:
+      - title: Peak LGA 775/771
+        description: Its my first custom PC, designed to run 2000s titles, maybe some early 2010s.
+        details: |-
+          - Specifications:
+            Mobo: GIGABYTE GA-EP45-UD3R
+            CPU: Xeon X5450 (Yes, Modded to Fit + Microcode)
+      - title: PostmarketOS Install/ Test
+        description: This year I plan to install pmOS onto a Redmi Note 5 Pro, documenting the whole process and the status of how well everything works.
+      - title: Nextcloud Server for Photo Management
+        description: I likely will host it using docker to create room for other projects, maybe an XMPP server
+
+  skill:
+    title: Skills
+    panelId: skill-panel
+    icon: fas fa-cogs
+    list:
+      - skill: NeoVIM User
+        skillrating: 100
+      - skill: Linux System Troubleshooting 💀
+        skillrating: 100
+      - skill: GT3 AC Hotlapping
+        skillrating: 100
+
+  hobby:
+    title: Hobbies
+    icon: fas fa-gamepad
+    list:
+      - hobby: Web Development
+      - hobby: Drone Racing
+      - hobby: Sim Racing
+      - hobby: All Things Gaming
+
