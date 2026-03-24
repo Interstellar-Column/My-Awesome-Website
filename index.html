@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en-us" class="m-auto dark">
+  <head>
+    <meta name="generator" content="Hugo 0.150.1">
+    <title>Heavenly-Cyberspace</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="theme-color" content="">
+    <meta name="description" content="Website title">
+    <meta name="author" content="Darshan Baral">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono">
+    <link rel="stylesheet" href="/main.min.ee60b0842e49c9474d86e140c28a1bba9806320fb455ec6de8224c1d29d316e3.css" integrity="sha256-7mCwhC5JyUdNhuFAwoobupgGMg+0Vext6CJMHSnTFuM=" crossorigin="anonymous">
+    
+    <style>
+      html {
+        touch-action: manipulation;
+        scroll-behavior: smooth;
+      }
+      
+      .panel {
+        max-height: 0;
+        transition: .3s ease-out;
+      }
+      
+      .profile-photo-container img {
+        max-width: 100%;
+      }
+      
+      .pagefind-ui__search-input {
+        color: #000;
+        width: 100%;
+        padding: .5em;
+        border-radius: .25em;
+        border: 1px solid gray;
+      }
+      
+      .pagefind-ui__search-clear {
+        display: none;
+      }
+      
+      .dark .pagefind-ui__search-input {
+        color: #fff;
+        background-color: #322d2d;
+        width: 100%;
+        padding: .5em;
+        border-radius: .25em;
+        border: 1px solid gray;
+      }
+      
+      .dark .pagefind-ui__search-input::placeholder {
+        color: #8f8f8f;
+      }
+      
+      .chevron {
+        transition: 300ms linear rotate;
+      }
+      
+      .active > .chevron {
+        transform: rotate(90deg);
+      }
+    </style>
+    
+    <script>
+      const expandAccordion = e => {
+        const t = Array.from(document.querySelectorAll(".panel")),
+          n = Array.from(document.querySelectorAll(".accordion"));
+        if (!e.parentElement.classList.contains("active")) {
+          n.forEach(e => {
+            e.classList.remove("active")
+          }),
+            e.parentElement.classList.add("active"),
+            t.forEach(function(e) {
+              e.style.maxHeight = null
+            });
+          let s = e.parentElement.nextElementSibling;
+          if (s.id != "skill-panel" && document.querySelector("#skill-panel")) {
+            let e = Array.from(document.querySelectorAll("#skill-percent"));
+            e.forEach(e => {
+              e.style.width = "0"
+            })
+          }
+          s.style.maxHeight = s.scrollHeight + "px"
+        }
+      }
+    </script>
+    
+    <script>
+      let html = document.querySelector("html"),
+        theme = window.localStorage.getItem("theme");
+      
+      const setTheme = e => {
+        html.classList.remove("light"),
+          e === "dark" ? (html.classList.add("dark"), window.localStorage.setItem("theme", "dark")) : (html.classList.remove("dark"), window.localStorage.setItem("theme", "light")),
+          fixThemeToggleIcon(e)
+      },
+        fixThemeToggleIcon = e => {
+          let t = document.querySelector(".theme-toggle");
+          t && (e === "dark" ? (t.classList.remove("fa-moon"), t.classList.add("fa-sun")) : (t.classList.remove("fa-sun"), t.classList.add("fa-moon")))
+        };
+      
+      if (theme == null)
+        if (html.classList.contains("dark"))
+          theme = "dark";
+        else if (html.classList.contains("light"))
+          theme = "light";
+        else {
+          const e = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          e ? theme = "dark" : theme = "light"
+        }
+      
+      setTheme(theme);
+      
+      const toggleTheme = () => {
+        setTheme(html.classList.contains("dark") ? "light" : "dark")
+      };
+      
+      window.onload = () => {
+        fixThemeToggleIcon(theme);
+        let e = document.querySelector(".accordion.active");
+        e && (e.nextElementSibling.style.maxHeight = e.nextElementSibling.scrollHeight + "px")
+      },
+        window.onresize = () => {
+          let e = document.querySelector(".accordion.active");
+          e && (e.nextElementSibling.style.maxHeight = e.nextElementSibling.scrollHeight + "px")
+        }
+    </script>
+  </head>
+  
+  <body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
+    <header class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between">
+      <div>
+        <a class="nav-menu-item" href="https://heavenly-cyberspace.xyz/">Home</a>
+        <a class="nav-menu-item" href="/blog">Blog</a>
+      </div>
+      <div>
+        <a class="mr-4" href="/search">
+          <i class="fas fa-search"></i>
+        </a>
+        <i class="fas fa-sun theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0" onclick="toggleTheme()"></i>
+      </div>
+    </header>
+    
+    <main class="grow">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-2 sm py-2">
+        <div class="col-span-2">
+          <div class="bg-gray-300 dark:bg-darker drop-shadow-md p-2 rounded-t-lg">
+            <div class="flex flex-col justify-center">
+              <div class="w-full p-2 flex justify-center align-middle profile-photo-container">
+                <img class="rounded-sm" src="/images/profile.jpg" alt="Darshan Baral">
+              </div>
+              <div class="px-2 text-center">
+                <h1 class="mb-0">Campbell. Ethan Campbell.</h1>
+                <h2 class="mb-0">Software Engineer</h2>
+                <h3 class="mb-4">London, UK</h3>
+                <div class="mb-4 flex flex-wrap justify-center">
+                  <div class="mx-2">
+                    <a class="text-2xl" href="https://github.com/Interstellar-Column">
+                      <i class="mt-1 fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="text-sm text-center border-t border-gray-500 bg-gray-200 dark:bg-dark rounded-b-lg py-2">
+            <p class="markdownify">powered by hugo</p>
+            <p>
+              <i>
+                <a href="https://github.com/darshanbaral/aafu">aafu</a>
+
+                </a>
+              </i>
+by
+<a href=https://www.darshanbaral.com/>darshan</a>
+</p>
+</footer>
+</div>
+<div class="col-span-3 relative">
+  <div class=px-2>
+    <h2 class="accordion active">
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-user"></i>
+        About Me
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2">
+      <div>
+        <p class=markdownify>I&rsquo;m a Software Engineer specialising in Python, Static Site Development & Linux Systems 🐍 x 🐧. I love people and using my skills + technical knowledge to fulfill the needs of those who desire.</p>
+      </div>
+    </div>
+  </div>
+  <div class=px-2>
+    <h2 class=accordion>
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-briefcase"></i>
+        Experiences
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2">
+      <div>
+        <h4 style=text-decoration:underline>Second Evangelism & Community Outreach Trip</h4>
+        <p class=mb-0>2024 - 2025 &#183; YWAM Tyler</p>
+        <div class="prose prose-stone dark:prose-invert max-w-none">
+          <ul>
+            <li>Christian Fellowship & Scripture Exploration ✨</li>
+          </ul>
+          <p>Hurricane Helene relief in Valdosta, GA (Samaritans Purse)
+            Community Support & Evangelism in Keyser, WV
+            Ministry Support & Evangelism in Alamogordo & Cloudcroft, NM
+          </p>
+        </div>
+        <h4 style=text-decoration:underline>First Evangelism & Community Outreach Trip</h4>
+        <p class=mb-0>2023 - 2024 &#183; YWAM Tyler</p>
+        <div class="prose prose-stone dark:prose-invert max-w-none">
+          <ul>
+            <li>Christian Fellowship & Scripture Exploration ✨</li>
+          </ul>
+          <p>Outreach in Jakarta & Bandung, Indonesia
+            Learnt Basic Indonesian
+            Networked with & supported their local ministries
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=px-2>
+    <h2 class=accordion>
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-graduation-cap"></i>
+        Education
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2">
+      <div>
+        <h4 style=text-decoration:underline>CS50 Python</h4>
+        <p>2025 - Present &#183; Harvard University</p>
+        <h4 style=text-decoration:underline>Computer Science & IT (Lvl 3)</h4>
+        <p>2021 - 2023 &#183; College of North West London</p>
+        <h4 style=text-decoration:underline>GCSE Computer Science & IT</h4>
+        <p>2019 - 2021 &#183; SMSJ CE</p>
+      </div>
+    </div>
+  </div>
+  <div class=px-2>
+    <h2 class=accordion>
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-project-diagram"></i>
+        Projects
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2">
+      <div>
+        <h4><a href>Peak LGA 775/771</a></h4>
+        <p class="markdownify indent-8">Its my first custom PC, designed to run 2000s titles, maybe some early 2010s.</p>
+        <h4><a href="/blog/pmos-t03g/">PostmarketOS Install/ Test</a></h4>
+        <p class="markdownify indent-8">This year I plan to install pmOS onto a Redmi Note 5 Pro, documenting the whole process and the status of how well everything works.</p>
+      </div>
+    </div>
+  </div>
+  <div class=px-2>
+    <h2 class=accordion>
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-cogs"></i>
+        Skills
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2" id=skill-panel>
+      <div>
+        <script>
+          let skillPanel=document.querySelector("#skill-panel").previousElementSibling;
+          skillPanel.addEventListener("click",function(){
+            let e=document.querySelectorAll("#skill-percent");
+            e.forEach(e=>{
+              e.style.width=e.classList[0]
+            })
+          })
+        </script>
+        <code>NeoVIM User</code>
+        <div class="w-100 mt-1 mb-3 border border-black dark:border-gray-300 rounded-sm" style=height:1.25rem>
+          <div id=skill-percent class="100% bg-blue-500 dark:bg-yellow-700 h-full rounded-sm" style="width:0;transition:all .5s"></div>
+        </div>
+        <code>Linux System Troubleshooting 💀</code>
+        <div class="w-100 mt-1 mb-3 border border-black dark:border-gray-300 rounded-sm" style=height:1.25rem>
+          <div id=skill-percent class="100% bg-blue-500 dark:bg-yellow-700 h-full rounded-sm" style="width:0;transition:all .5s"></div>
+        </div>
+        <code>Computer Hardware Repairs/ Maintenance</code>
+        <div class="w-100 mt-1 mb-3 border border-black dark:border-gray-300 rounded-sm" style=height:1.25rem>
+          <div id=skill-percent class="100% bg-blue-500 dark:bg-yellow-700 h-full rounded-sm" style="width:0;transition:all .5s"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=px-2>
+    <h2 class=accordion>
+      <p onclick=expandAccordion(this) style=cursor:pointer>
+        <i class="fas fa-gamepad"></i>
+        Hobbies
+      </p>
+    </h2>
+    <div class="panel overflow-hidden px-2 ml-2">
+      <div>
+        <ul class=pl-0>
+          <li class="list-unstyled mb-2">Web Development</li>
+          <li class="list-unstyled mb-2">Drone Racing</li>
+          <li class="list-unstyled mb-2">Sim Racing</li>
+          <li class="list-unstyled mb-2">All Things Gaming</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

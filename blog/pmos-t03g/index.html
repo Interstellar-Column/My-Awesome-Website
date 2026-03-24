@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-us" class="m-auto dark">
+<head>
+  <title>PostmarketOS - Heavenly-Cyberspace</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <meta name="theme-color" content="">
+  <meta name="description" content="Website title">
+  <meta name="author" content="Darshan Baral">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Didact+Gothic%7CRoboto:400%7CRoboto+Mono">
+  <link rel="stylesheet" href="/main.min.ee60b0842e49c9474d86e140c28a1bba9806320fb455ec6de8224c1d29d316e3.css" integrity="sha256-7mCwhC5JyUdNhuFAwoobupgGMg+0Vext6CJMHSnTFuM=" crossorigin="anonymous">
+  <style>
+    html {
+      touch-action: manipulation;
+      scroll-behavior: smooth;
+    }
+
+    .panel {
+      max-height: 0;
+      transition: .3s ease-out;
+    }
+
+    .profile-photo-container {
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .pagefind-ui__search-input {
+      color: #000;
+      width: 100%;
+      padding: .5em;
+      border-radius: .25em;
+      border: 1px solid gray;
+    }
+
+    .pagefind-ui__search-clear {
+      display: none;
+    }
+
+    .dark .pagefind-ui__search-input {
+      color: #fff;
+      background-color: #322d2d;
+      width: 100%;
+      padding: .5em;
+      border-radius: .25em;
+      border: 1px solid gray;
+    }
+
+    .dark .pagefind-ui__search-input::placeholder {
+      color: #8f8f8f;
+    }
+
+    .chevron {
+      transition: 300ms linear rotate;
+    }
+
+    .active > .chevron {
+      transform: rotate(90deg);
+    }
+  </style>
+  <script>
+    const expandAccordion = e => {
+      const panels = Array.from(document.querySelectorAll(".panel"));
+      const accordions = Array.from(document.querySelectorAll(".accordion"));
+
+      if (!e.parentElement.classList.contains("active")) {
+        accordions.forEach(accordion => {
+          accordion.classList.remove("active");
+        });
+
+        e.parentElement.classList.add("active");
+        panels.forEach(panel => {
+          panel.style.maxHeight = null;
+        });
+
+        let panel = e.parentElement.nextElementSibling;
+        if (panel.id !== "skill-panel" && document.querySelector("#skill-panel")) {
+          let skillPercents = Array.from(document.querySelectorAll("#skill-percent"));
+          skillPercents.forEach(skillPercent => {
+            skillPercent.style.width = "0";
+          });
+        }
+
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    };
+  </script>
+  <script>
+    let html = document.querySelector("html");
+    let theme = window.localStorage.getItem("theme");
+
+    const setTheme = e => {
+      html.classList.remove("light");
+      if (e === "dark") {
+        html.classList.add("dark");
+        window.localStorage.setItem("theme", "dark");
+      } else {
+        html.classList.remove("dark");
+        window.localStorage.setItem("theme", "light");
+      }
+      fixThemeToggleIcon(e);
+    };
+
+    const fixThemeToggleIcon = e => {
+      let toggleIcon = document.querySelector(".theme-toggle");
+      if (toggleIcon) {
+        if (e === "dark") {
+          toggleIcon.classList.remove("fa-moon");
+          toggleIcon.classList.add("fa-sun");
+        } else {
+          toggleIcon.classList.remove("fa-sun");
+          toggleIcon.classList.add("fa-moon");
+        }
+      }
+    };
+
+    if (theme == null) {
+      if (html.classList.contains("dark")) {
+        theme = "dark";
+      } else if (html.classList.contains("light")) {
+        theme = "light";
+      } else {
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        theme = prefersDarkScheme ? "dark" : "light";
+      }
+    }
+
+    setTheme(theme);
+
+    const toggleTheme = () => {
+      setTheme(html.classList.contains("dark") ? "light" : "dark");
+    };
+
+    window.onload = () => {
+      fixThemeToggleIcon(theme);
+      let activeAccordion = document.querySelector(".accordion.active");
+      if (activeAccordion) {
+        activeAccordion.nextElementSibling.style.maxHeight = activeAccordion.nextElementSibling.scrollHeight + "px";
+      }
+    };
+
+    window.onresize = () => {
+      let activeAccordion = document.querySelector(".accordion.active");
+      if (activeAccordion) {
+        activeAccordion.nextElementSibling.style.maxHeight = activeAccordion.nextElementSibling.scrollHeight + "px";
+      }
+    };
+  </script>
+</head>
+<body class="h-screen p-2 m-auto max-w-4xl flex flex-col">
+  <header class="nav flex flex-row row py-2 mb-6 w-full border-b border-gray-700 dark:border-gray-300 justify-between">
+      <div>
+          <a class="nav-menu-item" href="https://heavenly-cyberspace.xyz/">Home</a>
+          <a class="nav-menu-item" href="/blog">Blog</a>
+      </div>
+      <div>
+          <a class="mr-4" href="/search">
+              <i class="fas fa-search"></i>
+          </a>
+          <i class="fas fa-sun theme-toggle text-blue-500 hover:text-blue-700 dark:text-yellow-300 dark:hover:text-yellow-500 cursor-pointer text-lg mr-9 sm:mr-0" onclick="toggleTheme()"></i>
+      </div>
+  </header>
+  <main class="grow">
+      <div class="prose prose-stone dark:prose-invert max-w-none">
+          <div class="mb-3">
+              <h1 class="top-h1">PostmarketOS</h1>
+              <p class="mb-1">24th March 2026</p>
+              <p>&mdash;</p>
+            </div>
+            <div class="content">
+                <h3 id="first-tango-with-postmarketos">First Tango with PostmarketOS</h3>
+                <p>This guide will be walking through the install of pmOS to my trusty ‘t03g’ which is a Samsung Galaxy Note 2 (GT-N7100). The device is on TWRP 3.3.1-0<br>
+                Core information is:<br>
+                pmOS[Edge] - ea8061 - sxmo-de-dwm - 6.18.9-postmarketos-exynos4<br>
+                I found no issues installing via pmbootstrap. I used an Arch Linux based X220 laptop for the flashing (Linux 6.19.6-1-cachyos-rt-bore).<br>
+                </p>
+            </div>
+
+        </div>
+        <div class="flex flex-row justify-around my-2">
+            <h3 class="mb-1 mt-1 text-left mr-4">
+                <i class="text-gray-300 dark:text-gray-600 fas fa-chevron-circle-left"></i>
+            </h3>
+            <h3 class="mb-1 mt-1 text-left ml-4">
+                <a href="/blog/shoes/shoes/" title="The Kick Archive">
+                    <i class="nav-menu fas fa-chevron-circle-right"></i>
+                </a>
+            </h3>
+        </div>
+    </main>
+    <footer class="text-sm text-center border-t border-gray-500 py-6">
+        <p class="markdownify">powered by hugo</p>
+        <p>
+            <i>
+                <a href="https://github.com/darshanbaral/aafu">aafu</a>
+            </i>
+            by
+            <a href="https://www.darshanbaral.com/">darshan</a>
+        </p>
+    </footer>
+</body>
+
